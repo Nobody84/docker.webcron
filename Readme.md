@@ -23,6 +23,7 @@ Example:
 
 ## Volumes
 * Config path: The path to configuration folder
+
 ```
 -v /path/to/local/storage:/usr/src/app/config
 ```

@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Google",
+        "url": "http://google.com",
+        "interval": 5
+    },
+    {
+        "name": "Google",
+        "url": "https://google.com",
+        "interval": 10
+    }
+]

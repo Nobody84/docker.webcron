@@ -1,7 +1,11 @@
 # Webcron
+Webcron is a simple Python script that makes web requests at regular intervals.
+
 
 ## Config file (jobs.json)
 The configuration file is a json formated list of jobs. A job is defined by its name, the url to be requested and the request interval in seconds.
+
+Example:
 ```
 [
     {

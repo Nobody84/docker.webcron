@@ -9,12 +9,12 @@ Example:
 ```
 [
     {
-        "name": "Google",
+        "name": "Google HTTP",
         "url": "http://google.com",
         "interval": 5
     },
     {
-        "name": "Google",
+        "name": "Google HTTPS",
         "url": "https://google.com",
         "interval": 10
     }

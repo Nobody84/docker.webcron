@@ -69,8 +69,8 @@ def BuildIterations(jobs: list, interval: int, maxInterval: int):
 
     return iterations
 
-def SendRequest(url: str):
-    print(" -> {0} => ".format(url), end = '')
+def SendRequest(name: str, url: str):
+    print(" - {0} => ".format(name), end = '')
     request = urllib.request.Request(url)
     try:
         response = urllib.request.urlopen(request)
@@ -93,17 +93,19 @@ def main():
     interval = GcdFromList(intervals)
 
     # build the list of iterations of the interval
+    print()
     iterations = BuildIterations(jobs, interval, max(intervals))
     PrintIterations(iterations, interval)
 
+    print()
     print("Start sending the request. Interation interval = {0}s".format(interval))
     iteration = 0
     while True:
         date = datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')
-        print("Iteration: {0}, Time: {1}".format(str(iteration), date))
+        print("[{0}] ({1}/{2})".format(date, str(iteration+1), len(iterations)))
         startTime = time.time()
         for job in iterations[iteration]:
-            SendRequest(job['url'])
+            SendRequest(job['name'], job['url'])
 
         duration = time.time() - startTime
         if (interval - duration > 0):

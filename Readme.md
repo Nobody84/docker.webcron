@@ -1,5 +1,5 @@
 # Webcron
-Webcron is a simple Python script that makes web requests at regular intervals.
+A simple Python webcron script that makes web requests at regular intervals to multiple urls.
 
 
 ## Config file (jobs.json)
